@@ -1,0 +1,8 @@
+#how to use qsub.pl
+#first:generate the task.sh
+#second:revise the para in qsub.pl
+###
+print OUT2 "qsub -clear -binding linear:1 -b no -l num_proc=1,vf=5G -cwd -P HUMwxyS  -q bc.q $shfile\n"
+-P means the project name;-q means the queue name;
+###
+#third:perl qsub.pl task.sh
